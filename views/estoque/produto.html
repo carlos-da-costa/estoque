@@ -2,10 +2,15 @@
 <h1>Este é o template estoque/produto.html</h1>
 {{=form}}
 
-{{if request.vars.id_produto:}}
-<h4>
-    Estoque
-</h4>
 
-{{=LOAD(f='lista_movimento.load', vars={'id_produto': request.vars.id_produto})}}
+{{# um bloco condicional de html}}
+
+{{if request.vars.id_produto:}}
+	<h4>
+	    Estoque
+	</h4>
+	{{# carrega pagina de movimento como um comoponente nessa página}}
+	{{# extensão .load para que a página não execute o 'extend', carregando somente o seu conteúdo}}
+	{{# passo id do produto para carregar somente as movimentações desse produto}}
+	{{=LOAD(f='lista_movimento.load', vars={'id_produto': request.vars.id_produto})}}
 {{pass}}
