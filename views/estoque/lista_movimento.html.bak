@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+<h1>Movimento de Estoque</h1>
+{{=A('Lançar Estoque', _href=URL(f='movimento'), _class='btn btn-info')}}
+{{=movimentos}}

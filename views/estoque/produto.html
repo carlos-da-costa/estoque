@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<h1>Este é o template estoque/produto.html</h1>
+{{=form}}
+
+{{if request.vars.id_produto:}}
+<h4>
+    Estoque
+</h4>
+
+{{=LOAD(f='lista_movimento.load', vars={'id_produto': request.vars.id_produto})}}
+{{pass}}
