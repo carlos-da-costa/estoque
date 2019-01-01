@@ -1,4 +1,4 @@
-timestamp: 2018-11-08T00:40:18.725435
+timestamp: 2019-01-01T12:11:51.633000
 CREATE TABLE "auth_user"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "first_name" CHAR(128),
@@ -10,21 +10,21 @@ CREATE TABLE "auth_user"(
     "registration_id" CHAR(512)
 );
 success!
-timestamp: 2018-11-08T00:40:18.905697
+timestamp: 2019-01-01T12:11:51.802000
 CREATE TABLE "auth_group"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "role" CHAR(512),
     "description" TEXT
 );
 success!
-timestamp: 2018-11-08T00:40:18.993767
+timestamp: 2019-01-01T12:11:51.894000
 CREATE TABLE "auth_membership"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
     "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
 );
 success!
-timestamp: 2018-11-08T00:40:19.144943
+timestamp: 2019-01-01T12:11:51.986000
 CREATE TABLE "auth_permission"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  ,
@@ -33,7 +33,7 @@ CREATE TABLE "auth_permission"(
     "record_id" INTEGER
 );
 success!
-timestamp: 2018-11-08T00:40:19.265546
+timestamp: 2019-01-01T12:11:52.102000
 CREATE TABLE "auth_event"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "time_stamp" TIMESTAMP,
@@ -43,7 +43,7 @@ CREATE TABLE "auth_event"(
     "description" TEXT
 );
 success!
-timestamp: 2018-11-08T00:40:19.377200
+timestamp: 2019-01-01T12:11:52.219000
 CREATE TABLE "auth_cas"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
@@ -53,14 +53,14 @@ CREATE TABLE "auth_cas"(
     "renew" CHAR(1)
 );
 success!
-timestamp: 2018-11-08T00:40:19.502663
+timestamp: 2019-01-01T12:11:52.411000
 CREATE TABLE "produto"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nome" CHAR(512),
     "estoque_atual" INTEGER
 );
 success!
-timestamp: 2018-11-08T00:40:19.623034
+timestamp: 2019-01-01T12:11:52.547000
 CREATE TABLE "movimento"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "tipo" CHAR(512),

@@ -13,7 +13,7 @@
       <ul>
           <li><a class="btn btn-default" href="{{=URL('estoque', 'produto')}}">Novo produto</a></li>
           <li><a class="btn btn-info" href="{{=URL('estoque', 'lista_produto')}}">Lista produto</a></li>
-          <li><a class="btn btn-info" href="{{=URL('estoque', 'lista_movimento')}}">Novo Movimento</a></li>
+          <li><a class="btn btn-info" href="{{=URL('estoque', 'produto')}}">Novo Movimento</a></li>
       </ul>
 
   </div>
